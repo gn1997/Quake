@@ -51,3 +51,8 @@ Para cada jogo o parser gera:
 
 ## Task 3
 
+
+## Pré-requisito
+
+Certifique-se de ter Python3 (>=3.6) para executar este aplicativo.
+
