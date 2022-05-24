@@ -13,7 +13,7 @@ O arquivo games.log é gerado pelo servidor de quake 3 arena.
 Ele registra todas as informações dos jogos, quando um jogo começa, 
 quando termina, quem matou quem, quem morreu pq caiu no vazio, 
 quem morreu machucado, entre outros. 
-E em cada jogo deve coletar as informações de morte.
+E em cada jogo deve coletado as informações de morte.
 No fim gera um arquivo json: 'Quake.json', com as informações do jogo.
 
 ### Exemplo
