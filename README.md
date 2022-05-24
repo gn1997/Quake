@@ -7,7 +7,7 @@ quem morreu machucado, entre outros.
 O parser é capaz de ler o arquivo: "games.log" . 
 No fim gera um arquivo json: 'Quake.json', com as informações do jogo.
 
-# Tarefa princial(Main)
+# Tarefa princial(Task Main)
 O programa separa o arquivo linha por linha e as transforma em listas. O arquivo então analisa as linhas e busca alterações na partida e de acordo com as alterações, cria e modifica um dicionario que contem as informações da partida.
 
 O programa então agrupa os dicionarios das partidas em uma grande lista de partidas e finaliza o inserindo em um .json.
@@ -15,13 +15,17 @@ O programa então agrupa os dicionarios das partidas em uma grande lista de part
 
 ## Task 1
 
-Construa um parser para o arquivo de log games.log.
-
-O arquivo `games.log` é gerado pelo servidor de quake 3 arena. Ele registra todas as informações dos jogos, quando um jogo começa, quando termina, quem matou quem, quem morreu pq caiu no vazio, quem morreu machucado, entre outros.
-
-O parser deve ser capaz de ler o arquivo, agrupar os dados de cada jogo, e em cada jogo deve coletar as informações de morte.
+Parser para o arquivo de log: games.log. 
+O arquivo games.log é gerado pelo servidor de quake 3 arena. 
+Ele registra todas as informações dos jogos, quando um jogo começa, 
+quando termina, quem matou quem, quem morreu pq caiu no vazio, 
+quem morreu machucado, entre outros.  
+O parser é capaz de ler o arquivo: "games.log" . 
+No fim gera um arquivo json: 'Quake.json', com as informações do jogo.
 
 ### Exemplo
+
+Uma linha no arquivo como essa:
 
   	21:42 Kill: 1022 2 22: <world> killed Isgalamido by MOD_TRIGGER_HURT
   
@@ -31,7 +35,7 @@ O parser deve ser capaz de ler o arquivo, agrupar os dados de cada jogo, e em ca
   
   O player "Isgalamido" matou o player Dono da Bola usando a arma Railgun.
   
-Para cada jogo o parser deve gerar algo como:
+Para cada jogo o parser gera:
 
     game_1: {
 	    total_kills: 45;
@@ -42,3 +46,9 @@ Para cada jogo o parser deve gerar algo como:
 	      "Zeh": 20
 	    }
 	  }
+	  
+### Observações
+
+1. Quando o `<world>` mata o player ele perde -1 kill.
+2. `<world>` não é um player e não deve aparecer na lista de players e nem no dicionário de kills.
+3. `total_kills` são os kills dos games, isso inclui mortes do `<world>`.
