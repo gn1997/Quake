@@ -3,7 +3,7 @@
 # Tarefa princial(Task Main)
 O programa separa o arquivo linha por linha e as transforma em listas. O arquivo então analisa as linhas e busca alterações na partida e de acordo com as alterações, cria e modifica um dicionario que contem as informações da partida.
 
-O programa então agrupa os dicionarios das partidas em uma grande lista de partidas e finaliza o inserindo em um .json.
+O programa então agrupa os dicionarios das partidas em uma grande lista de partidas e finaliza o inserindo em um arquivo: .json.
 
 
 ## Task 1
